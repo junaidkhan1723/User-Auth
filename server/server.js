@@ -21,7 +21,7 @@ app.use(cors({
     if (!origin) return callback(null, true);
 
     const allowedOrigins = [
-      ""  // production frontend
+      "https://user-auth-chi.vercel.app"  // production frontend
     ];
 
     const localhostRegex = /^http:\/\/localhost:\d+$/;
