@@ -21,7 +21,7 @@ app.use(cors({
     if (!origin) return callback(null, true);
 
     const allowedOrigins = [
-      "https://blog-x-six.vercel.app"  // production frontend
+      ""  // production frontend
     ];
 
     const localhostRegex = /^http:\/\/localhost:\d+$/;
