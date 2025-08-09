@@ -8,13 +8,13 @@ A simple and secure full-stack user authentication system built with **React**, 
 
 ## 🚀 Features
 
-- ✅ User Registration & Login
-- 🔒 Password hashing with bcrypt
-- 🎫 JWT-based authentication
-- 🧠 Session persistence (localStorage/token)
-- 🚫 Protected Routes
-- 📦 API built with Express + MongoDB
-- ⚛️ Frontend built using React.js
+-  User Registration & Login
+-  Password hashing with bcrypt
+-  JWT-based authentication
+-  Session persistence (localStorage/token)
+-  Protected Routes
+-  API built with Express + MongoDB
+- ⚛ Frontend built using React.js
 
 ---
 
