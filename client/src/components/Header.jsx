@@ -70,14 +70,14 @@ const Header = () => {
 
         {/* Description */}
         <div className="max-w-3xl mx-auto mb-8">
-          <p className="text-lg md:text-xl text-gray-100 mb-6 leading-relaxed">
+          <p className="text-md md:text-xl text-gray-100 mb-6 leading-relaxed">
             Professional-grade authentication system with modern security
             practices. Easily integrate secure user management into your
             projects.
           </p>
 
           <p className="text-gray-300 text-xs sm:text-lg leading-relaxed">
-            <span className="text-lg">Built with </span>{" "}
+            <span className="text-lg font-semibold">Built with </span>{" "}
             <br className="sm:hidden" />
             <span className="mx-2 my-2 inline-flex items-center gap-1  font-semibold text-purple-700 bg-purple-50 px-2 py-1 rounded-md">
               <i className="bi bi-person-plus text-xs sm:text-sm"></i>
