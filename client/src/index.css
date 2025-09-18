@@ -43,3 +43,52 @@
 }
 
 
+/* shimmer effect header name */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #000000 0%,   
+    #2f2e2e 40%,  
+    #ffffff 80%   
+  );
+  background-size: 200% auto; 
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* footer*/
+
+.shimmer-text-footer {
+  background: linear-gradient(
+    90deg,
+    #382fe1 0%,   
+    #dc18ea 40%,  
+    #ffffff 80%   
+  );
+  background-size: 200% auto; 
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+

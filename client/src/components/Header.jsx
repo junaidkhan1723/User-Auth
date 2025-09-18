@@ -29,64 +29,115 @@ const Header = () => {
 
   return (
     <>
-      <div className="mx-4 sm:mx-16 xl:mx-24 relative text-center ">
-        <h1 className=" flex items-center justify-center text-gray-900 gap-2 text-2xl sm:text-4xl font-semibold mb-2 sm:mb-2">
-          Hey{" "}
-          <span className="text-purple-800 font-semibold animate-bounceX hover:animate-wiggleX hover:text-purple-600 transition duration-300 ">
+      <div className="mx-4 sm:mx-16 xl:mx-24 relative text-center text-white ">
+        
+        {/* Status Badge */}
+        <div className="flex items-center justify-center mb-8">
+          <div className="animate-bounceX hover:animate-wiggleX inline-flex items-center gap-2 bg-white backdrop-blur-sm border border-gray-200/60 rounded-full px-4 py-2 shadow-sm">
+            <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse "></div>
+            <span className="text-sm font-medium text-gray-900 ">
+              {userData ? "✨ Authenticated" : "🔐 Authentication Required"}
+            </span>
+          </div>
+        </div>
+
+        {/* Main Heading */}
+        <div className="mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
+            Hey{" "}
+            <span className="relative inline-block shimmer-text">
+              {userData?.name.split(" ")[0] || "Developer"}
+            </span>
+            {' '}!
+          </h1>
+          
+          <div className="space-y-3">
+            <h2 className="text-2xl md:text-3xl font-semibold text-gray-200">
+              User Authentication
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto"></div>
+          </div>
+        </div>
+
+        {/* Description */}
+        <div className="max-w-3xl mx-auto mb-8">
+          <p className="text-lg md:text-xl text-gray-100 mb-6 leading-relaxed">
+            Professional-grade authentication system with modern security practices. 
+            Easily integrate secure user management into your projects.
+          </p>
+          
+          <p className="text-gray-300 text-xs sm:text-lg leading-relaxed">
+           <span className="text-lg">Built with{" "}</span> <br className="sm:hidden"/>
+            <span className="mx-2 my-2 inline-flex items-center gap-1  font-semibold text-purple-700 bg-purple-50 px-2 py-1 rounded-md">
+              <i className="bi bi-person-plus text-xs sm:text-sm"></i>
+              account creation
+            </span>
             {" "}
-            {userData?.name.split(" ")[0] || "Developer"}!{" "}
-          </span>{" "}
-  
-        </h1>
-        <h2 className="text-xl sm:text-2xl font-semibold text-gray-600 ">
-          Welcome To User-Authentication page
-        </h2>
+            <span className=" mx-2 my-2 inline-flex items-center gap-1 font-semibold text-indigo-700 bg-indigo-50 px-2 py-1 rounded-md">
+              <i className="bi bi-shield-lock text-sm"></i>
+              JWT-based login
+            </span>
+            {" "}
+            <span className="mx-2 my-2 inline-flex items-center gap-1 font-semibold text-green-700 bg-green-50 px-2 py-1 rounded-md">
+              <i className="bi bi-envelope-check text-sm"></i>
+              email verification
+            </span>
+            {" "}
+            <span className="mx-2 my-2 inline-flex items-center gap-1 font-semibold text-blue-700 bg-blue-50 px-2 py-1 rounded-md">
+              <i className="bi bi-lock text-sm"></i>
+              secure password hashing
+            </span>
+            {" "} 
+            <span className="mx-2 my-2 inline-flex items-center gap-1 font-semibold text-yellow-700 bg-yellow-50 px-2 py-1 rounded-md">
+              <i className="bi bi-cookie text-sm"></i>
+              cookie sessions
+            </span>
+            <span className="mx-2 my-2 inline-flex items-center gap-1 font-semibold text-pink-700 bg-pink-50 px-2 py-1 rounded-md">
+              <i className="bi bi-check-circle text-sm"></i>
+              token validation
+            </span>
+          </p>
+        </div>
 
-       <p className="my-2 sm:my-4 max-w-2xl m-auto text-xs sm:text-sm text-gray-500">
-  This project is a complete developer-friendly authentication setup built with modern best practices in mind.
-</p>
+        {/* Status Message */}
+        <div className="mb-6">
+          <p className="text-gray-600 text-lg">
+            {userData ? (
+              <span className="inline-flex items-center gap-2 text-green-700 font-medium">
+                <i className="bi bi-check-circle-fill"></i>
+                You're successfully logged in!
+              </span>
+            ) : (
+              <span className="text-white">
+                Please <strong className="text-purple-700">sign up</strong> or{" "}
+                <strong className="text-blue-700">log in</strong> to continue
+              </span>
+            )}
+          </p>
+        </div>
 
-<p className="text-gray-700 max-w-2xl mx-auto text-center text-sm sm:text-lg mt-4 mb-4">
-  It includes features like{" "}
-  <span className="font-medium text-purple-700">account creation</span>,{" "}
-  <span className="font-medium text-indigo-700">JWT-based login</span>,{" "}
-  <span className="font-medium text-green-700">email verification</span>,{" "}
-  <span className="font-medium text-blue-700">secure password hashing</span>,{" "}
-  <span className="font-medium text-yellow-700">cookie sessions</span>, and{" "}
-  <span className="font-medium text-pink-700">token validation</span>.
-</p>
-
-        <p className="text-gray-600 text-sm sm:text-base max-w-xl mx-auto mb-8">
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           {userData ? (
-            <>
-               <strong>You're logged in!</strong>
-              
-            </>
+            <button
+              onClick={logout}
+              className="cursor-pointer group inline-flex items-center gap-3 bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold rounded-full px-8 py-4 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
+            >
+              <span>Logout</span>
+              <i className="bi bi-box-arrow-right text-lg group-hover:translate-x-1 transition-transform duration-300"></i>
+            </button>
           ) : (
-            <>
-             Please <strong>sign up</strong> or{" "}
-              <strong>log in</strong>.
-
-            </>
+            <button
+              onClick={() => navigate("/login")}
+              className="cursor-pointer group inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full px-8 py-4 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
+            >
+              <span>Get Started</span>
+              <i className="bi bi-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+            </button>
           )}
-        </p>
+          
+        </div>
 
-        {userData ? (
-          <button
-            onClick={logout}
-            className=" text-white font-semibold rounded-full px-8 py-2.5 bg-primary  hover:text-red-300 transition-all select-none cursor-pointer "
-          >
-           
-                    <span>Logout</span>{''} <i className="bi bi-box-arrow-right text-lg"></i>
-          </button>
-        ) : (
-          <button
-            onClick={() => navigate("/login")}
-            className=" rounded-full px-8 py-2.5 bg-primary  hover:text-white transition-all select-none cursor-pointer"
-          >
-            Login <i class="bi bi-arrow-right"></i>
-          </button>
-        )}
       </div>
     </>
   );

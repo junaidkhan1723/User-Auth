@@ -103,7 +103,7 @@ function Navbar() {
             <div
               onClick={() => setMenuOpen(!menuOpen)}
               className="w-12 h-10 sm:w-16 sm:h-12 flex justify-center items-center
-              text-white  font-semibold rounded-lg bg-gray-400 hover:bg-zinc-500 transition-all cursor-pointer mb-3 me-4"
+              text-gray-900  font-semibold rounded-lg bg-gray-100 hover:bg-zinc-300 transition-all cursor-pointer mb-3 me-4"
             >
               <span className="text-xl select-none">{userData.name[0].toUpperCase()}</span>
               {/*  Blue Tick if Verified */}
@@ -149,7 +149,7 @@ function Navbar() {
                       className={`py-2 px-4 flex items-center gap-2 rounded-md ${
                         cooldown > 0 || isSending
                           ? 'text-gray-400 cursor-not-allowed'
-                          : 'hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer'
+                          : 'hover:bg-gray-100 cursor-pointer'
                       }`}
                     >
                       <i className="bi bi-patch-check-fill text-blue-600 text-lg"></i>
@@ -193,7 +193,7 @@ function Navbar() {
           //  If user not logged in, show login button
           <button
             onClick={() => navigate('/login')}
-            className="flex items-center text-xl gap-2 bg-indigo-700 border border-gray-500 rounded-full px-4 py-2 sm:px-6 sm:py-3 text-white hover:bg-gray-700 transition-all select-none"
+            className="flex items-center text-xl gap-2 bg-gray-100 border border-gray-300 rounded-full px-4 py-2 sm:px-6 sm:py-3 sm:me-5 me-2 text-gray-900 hover:bg-gray-300 transition-all select-none cursor-pointer"
           >
             <i className="bi bi-person-add"></i>
           </button>
