@@ -55,7 +55,7 @@
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: shimmer 3s linear infinite;
+  animation: shimmer 5s linear infinite;
 }
 
 @keyframes shimmer {
@@ -80,7 +80,7 @@
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: shimmer 3s linear infinite;
+  animation: shimmer 5s linear infinite;
 }
 
 @keyframes shimmer {
