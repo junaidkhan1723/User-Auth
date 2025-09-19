@@ -72,7 +72,7 @@ function Login() {
     <div className="flex items-center justify-center min-h-screen px-4 bg-[#f4f4f5]">
       <img
         onClick={() => navigate("/")}
-        src={assets.logo}
+        src={assets.logoB}
         alt="Logo"
         className="absolute left-3 mb-2 sm:left-10 top-1 w-20 sm:w-30 cursor-pointer"
       />
